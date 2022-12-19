@@ -1,8 +1,9 @@
+const    fs = requiere('fs')
+
 const products = []
 
-
 class ProductManager {
-
+    
     static id = 1
 
         constructor(title, description, price, thumbnail, code, stock) {
@@ -80,4 +81,7 @@ naranja.addProduct()
 getProducts()
 
 getProductsById(2)
+
+
+
 
