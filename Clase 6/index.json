@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Banana",
+    "description": "banana",
+    "price": 500,
+    "thumbnail": "imagen",
+    "code": 100,
+    "stock": 6,
+    "path": "./index.json",
+    "id": 1
+  },
+  {
+    "title": "Pera",
+    "description": "Pera",
+    "price": 500,
+    "thumbnail": "imagen",
+    "code": 300,
+    "stock": 6,
+    "path": "./index.json",
+    "id": 2
+  },
+  {
+    "title": "Frutilla",
+    "description": "Frutilla",
+    "price": 580,
+    "thumbnail": "imagen",
+    "code": 580,
+    "stock": 6,
+    "path": "./index.json",
+    "id": 3
+  }
+]
