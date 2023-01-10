@@ -2,8 +2,6 @@ const express = require('express')
 const app = express()
 const { urlencoded } = require('express');
 const { productsRouter } = require('./Routes/productsRouter')
-const _products = require('./database/products.json')
-const fs = require('fs');
 const { cartsRouter } = require('./Routes/cartsRouter');
 
 

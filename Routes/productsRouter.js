@@ -2,6 +2,7 @@ const express = require('express')
 const productsRouter = express.Router()
 const fs = require('fs');
 
+
 let _products = require('../database/products.json');
 let products = []
 
@@ -15,6 +16,7 @@ productsRouter.get('/', (req, res) => {
     }
     res.send(_products)
 });
+
 productsRouter.get('/:pid', (req, res) => {
     const pid = req.params.pid  
     product = _products.find((e) => e.id == pid);
@@ -36,20 +38,19 @@ productsRouter.post('/', (req, res) => {
         return res.send('Ok');
         
     }  else {
-        console.log('No cargado')
+        res.status(400).send("Bad request");
     }
 
-    res.status(400).send("Bad request");
 })
 
 productsRouter.put('/:pid', (req, res) => {
-    //Actualizar producto
-    let update = req.body
-    let productId = products.find( (e) => e.id == +req.params.pid)
-    let updateId = req.params -1
-    console.log(+req.params.pid - 1, 'put - productsid')
 
-    _products[+req.params.pid - 1] = {
+    let pid = req.params.pid
+    let numb = (e) => e.id == pid
+    let index = _products.findIndex(numb)
+
+    index = Number(index)
+    _products[index] = {
         title: req.body.title,
         description: req.body.description,
         price: req.body.price,
@@ -60,18 +61,13 @@ productsRouter.put('/:pid', (req, res) => {
         id: +req.params.pid
     }
     fs.writeFileSync('./database/products.json', JSON.stringify(_products));
-    console.log(update, 'put - update')
-    console.log(_products, 'put - postupdate')
     res.send('Producto actualizado con exito!')
 });
 
 productsRouter.delete('/:pid', (req, res) => {
 
-    _products = _products.filter((e) => e.id !== +req.params.pid)
-    console.log('del', _products)
-    
+    _products = _products.filter((e) => e.id !== +req.params.pid)    
     fs.writeFileSync('./database/products.json', JSON.stringify(_products))
-
     res.send('Producto eliminado!');
 
 })  
