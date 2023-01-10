@@ -48,5 +48,15 @@
     "stock": 10,
     "path": "./index.json",
     "id": 5
+  },
+  {
+    "title": "Zanahoria",
+    "description": "Zanahoria naranja",
+    "price": 170,
+    "thumbnail": "imagen",
+    "code": 2890,
+    "stock": 3,
+    "path": "./index.json",
+    "id": 6
   }
 ]
