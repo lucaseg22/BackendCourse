@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Banana",
+    "description": "banana",
+    "price": 500,
+    "thumbnail": "imagen",
+    "code": 100,
+    "stock": 6,
+    "path": "./index.json",
+    "id": 1
+  },
+  {
+    "title": "Pera",
+    "description": "Pera",
+    "price": 500,
+    "thumbnail": "imagen",
+    "code": 300,
+    "stock": 6,
+    "path": "./index.json",
+    "id": 2
+  },
+  {
+    "title": "Frutilla",
+    "description": "Frutilla",
+    "price": 580,
+    "thumbnail": "imagen",
+    "code": 580,
+    "stock": 6,
+    "path": "./index.json",
+    "id": 3
+  },
+  {
+    "title": "Pomelo",
+    "description": "Pomeleto",
+    "price": 200,
+    "thumbnail": "imagen",
+    "code": 100,
+    "stock": 5,
+    "path": "./index.json",
+    "id": 4
+  },
+  {
+    "title": "Arveja",
+    "description": "Arveja",
+    "price": 150,
+    "thumbnail": "imagen",
+    "code": 190,
+    "stock": 10,
+    "path": "./index.json",
+    "id": 5
+  }
+]
